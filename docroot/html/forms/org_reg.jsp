@@ -18,84 +18,82 @@
 <h4>Register</h4>
 <form id="myForm">
 
-  <div class="form-group">
-    <label class="control-label" for="name">Organization Name:</label>
-    <div class="controls">
-      <input name="org_name" id="name" class="form-control field-required" type="text" style="width:200px;">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label class="control-label" for="age">Contact No:</label>
-    <div class="controls">
-      <input name="phno" id="phno" class="form-control field-required field-digits" type="text" maxlength="10">
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label class="control-label" for="email">E-mail:</label>
-    <div class="controls">
-      <input name="email" id="email" class="form-control field-required field-email" type="text">
-    </div>
-  </div>
- <div class="form-group">
-    <label class="control-label" for="email">Area of Business:</label>
-   <select id="" name="areabuss" class="form-control field-required">
-   <option selected="0"></option>
+ <table border="2" align="center" style="width: 700px;  margin-bottom: 3px; padding: 3px"  cellpadding="5px"> 
+<tr>
+	<td>Organization Name<b style="color: red;">*</b>:
+	</td>
+	<td>
+		<input name="org_name" id="name" class="form-control field-required" type="text" style="width:500px;">
+	</td>
+</tr>
+<tr>
+	<td>Area of Business<b style="color: red;">*</b></td>
+	<td><select id="" name="areabuss" class="form-control field-required">
     <option value="1">BioTech</option>
     <option value="2">Mechanical</option>
     <option value="3">IT</option>
     <option value="4">E-commerce</option>
-    </select>
- </div>
- 
-<div class="form-group">
-    <label class="control-label" for="email">Address:</label>
-    <textarea id="myTextarea" class="form-control"></textarea>
-<p id="myCounter"></p>
-</div>
-
-<div id="shipping">
-  <p>
-    <select name="state" id="Country">
+    </select></td>
+</tr>
+</table>
+ <table border="2" align="center" style="width: 700px; margin-bottom: 3px; padding: 3px"  cellpadding="5px">
+ <tr>
+ 	<td>Contact No<b style="color: red;">*</b>:</td>
+ 	<td><input name="phno" id="phno" class="form-control field-required field-digits" type="text" maxlength="10" style="width: 150px"></td>
+ 	<td>E-mail<b style="color: red;">*</b>:</td>
+ 	<td><input name="email" id="email" class="form-control field-required field-email" type="text" style="width: 330px"></td>
+ </tr>
+ <tr>
+ 	<td>Address:</td>
+ 	<td colspan="3"><textarea id="myTextarea" class="form-control" cols="300" rows="3" style="width: 500px; height: 50px"></textarea></td>
+ </tr>
+ <tr>
+ 	<!-- <td>Country:</td>
+ 	<td><select name="state" id="Country">
       <option value="">Choose a Country...</option>
-    </select>
-  </p>
-  <p>
-    <select name="city" id="state">
+    </select></td>
+    <td>State:</td>
+    <td><select name="city" id="state">
       <option value="">Choose a State...</option>
-    </select>
-  </p>
-  <p>
-    <select name="city" id="city">
+    </select></td>
+ </tr>
+ <tr>
+ 	<td>City:</td>
+ 	<td><select name="city" id="city">
       <option value="">Choose a City...</option>
-    </select>
-  </p>
-</div>
-
-  <div class="form-group">
-    <label class="control-label" for="pin">PinCode:</label>
-    <div class="controls1">
-      <input name="pin" id="pin" type="number" maxlength="6">
-    </div>
-  </div>
- 
-    <div class="form-group">
-    <label class="control-label" for="users">No of users:</label>
-    <div class="controls">
-      <input name="users" id="users" class="form-control field-required field-digits" type="number">
-    </div>
-  </div>
- 
- <div id="myCheckgroup">
- <label class="control-label" for="trial">Text here trial:</label>
- <p>
-  <input type="Radio" value="yes" name="trial"> <br>
-  <input type="Radio" value="No" name="trial"> </p>
-</div>
-  <br>
-  <input type="submit" value="Submit" onClick="return confirm('Congrats, We have successfully registered your organization!!!')">
- <a class="btn" href="<%=paymentURL%>">Next</a>
+    </select></td>
+    <td>Pin code:</td>
+ 	<td><input type="text" maxlength="6"></td> -->
+ 	
+     <td colspan="4">   
+        <br/>Select Country:
+        <select id="country" name="country"></select>
+        Select State:
+        <select name="state" id="state"></select>
+         <script language="javascript">
+            populateCountries("country", "state");
+            populateCountries("country2");
+        </script>
+        
+    </td>
+ 	
+ </tr>
+ </table>
+<table border="2" align="center" style="width: 700px;margin-bottom: 3px; padding: 3px" cellpadding="5px">
+<tr>
+	<td style="width: 100px">No of Users<b style="color: red;">*</b>:</td>
+	<td style="width: 200px"><input name="users" id="users" class="form-control field-required field-digits" type="number" style="width: 100px"></td>
+	<td style="width: 100px">Text here trial<b style="color: red;">*</b>:</td>
+	<td><input type="radio" name="trial" value="yes">Yes <input type="radio" name="trial" value="no">No</td>
+</tr>
+</table>
+<table align="center" style="width: 700px; height: 10px; margin-left: 250px">
+	<tr>
+		<td><input type="submit" value="Submit" onClick="return confirm('Congrats, We have successfully registered your organization!!!')">
+ <a class="btn" href="<%=paymentURL%>">Next</a></td>
+	</tr>
+</table>
+  
 
 </form>
 <script>
