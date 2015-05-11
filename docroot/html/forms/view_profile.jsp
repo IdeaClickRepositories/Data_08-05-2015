@@ -344,9 +344,9 @@ output.src = URL.createObjectURL(event.target.files[0]);
 	<input name="nm" id="nm" class="form-control field-required" type="text" style="width: 350px; border-radius: 0px 10px 0px 10px; width: 350px">
     </div><!-- end of box -->
 	<br>	
-	<div class="box" style="margin-left: 108px">Email Id<b style="color: red;">*</b>: &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<input name="emailid" id="emailid" class="form-control field-required" type="text" style=" border-radius: 0px 10px 0px 10px; width: 350px"></div><!-- end of box -->
+	<div class="box" style="margin-left: 108px">Email Id<b style="color: red;">*</b>: &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<input name="emailid" id="emailid" class="form-control field-required" type="email" style=" border-radius: 0px 10px 0px 10px; width: 350px"></div><!-- end of box -->
 	<br>		
-	<div class="box" style="margin-left: 108px">Mobile No.<b style="color: red;">*</b>:&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input name="contact_no" id="contact_no" class="form-control field-required" type="text" maxlength="10" style=" border-radius: 0px 10px 0px 10px; width: 100px">
+	<div class="box" style="margin-left: 108px">Mobile No.<b style="color: red;">*</b>:&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input name="contact_no" id="contact_no" class="form-control field-required" type="number" maxlength="10" style=" border-radius: 0px 10px 0px 10px; width: 100px">
 	&nbsp; &nbsp; &nbsp;&nbsp;Date of Birth: &nbsp; &nbsp;<input  id="datepk"class="form-control" type="text" style=" border-radius: 0px 10px 0px 10px; width: 100px">
 	</div><!-- end of box -->
     <br>
