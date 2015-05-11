@@ -12,50 +12,35 @@
 <title>Insert title here</title>
 <script src="/IdeaClicks-portlet/docroot/js/aui-min.js"></script>
 <link href="/IdeaClicks-portlet/docroot/css/bootstrap.min.css" rel="stylesheet"></link>
+<link href="login.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
-<h3><b>Edit Profile</</b></h3>
+<h3><b>Edit Profile</b></h3>
+<div id="main">
 <form id="myForm">
 
-<div class="form-group">
-    <label class="control-label" for="picture">Upload photo:</label>
-    <div class="controls">
-      <input name="picture" id="picture" class="form-control" type="file">
-    </div>
-  </div>
-
-
- <div class="form-group">
-    <label class="control-label" for="campaignnm">Name:</label>
-    <div class="controls">
-      <input name="nm" id="nm" class="form-control field-required" type="text">
-    </div>
-  </div>
- 
-  <div class="form-group">
-    <label class="control-label" for="campaignnm">Organization Name:</label>
-    <div class="controls">
-      <input name="orgnm" id="orgnm" class="form-control field-required" type="text">
-    </div>
-  </div>
- 
-  <div class="form-group">
-    <label class="control-label" for="campaignnm">Address:</label>
-    <div class="controls">
-      <textarea cols="25" rows="3" class="form-control field-required" type="text"></textarea>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <label class="control-label" for="campaignnm">Contact Number:</label>
-    <div class="controls">
-      <input name="orgnm" id="orgnm" class="form-control field-required" type="number" maxlength="10">
-    </div>
-  </div>
-     
- <p><button class="btn btn-success" >Update</button>
-
+	<div class="box" style="margin-left: 108px">Upload photo: &nbsp; &nbsp;
+	<input name="picture" id="picture" class="form-control" type="file" style=" border-radius: 0px 10px 0px 10px; width: 250px">
+    </div><!-- end of box -->
+	<br>	
+	<div class="box" style="margin-left: 108px">Name<b style="color: red;">*</b>: &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<input name="nm" id="nm" class="form-control field-required" type="text" style=" border-radius: 0px 10px 0px 10px; width: 350px"></div><!-- end of box -->
+	<br>		
+	<div class="box" style="margin-left: 108px">Organization Name<b style="color: red;">*</b>:&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input name="orgnm" id="orgnm" class="form-control field-required" type="text" style=" border-radius: 0px 10px 0px 10px; width: 275px"></div><!-- end of box -->
+	<br>
+	
+	
+	<div class="box" style="margin-left: 108px">Address<b style="color: red">*</b>: &nbsp; &nbsp;<textarea cols="25" rows="3" class="form-control field-required" id="address" style=" border-radius: 0px 10px 0px 10px; width: 355px"></textarea>
+    </div><!-- end of box -->
+    <br>
+    <div class="box" style="margin-left: 108px">Contact Number<b style="color: red">*</b>: &nbsp; &nbsp;<input name="contact_no" id="contact_no" class="form-control field-required" type="text" maxlength="10" style=" border-radius: 0px 10px 0px 10px; width: 150px">
+    </div><!-- end of box -->
+	<br>
+	<div class="box" style="margin-left: 280px; margin-bottom: 20px">   
+        <button >Update</button>
+    </div><!-- end of box -->
 </form>
+</div><!-- end of main -->   
 <script>
 YUI().use(
                   'aui-form-validator',
@@ -70,22 +55,20 @@ YUI().use(
                         equalTo: '#email',
                         required: true
                       },
-                      gender: {
+                      address: {
                         required: true
                       },
-                      name: {
-                        rangeLength: [2, 50],
+                      nm: {
                         required: true
                       },
                       picture: {
                         acceptFiles: 'jpg, gif, png',
                         required: true
                       },
-                      url: {
-                        url: true
+                      orgnm: {
+                    	  required: true
                       }
                     };
-
                     var fieldStrings = {
                       email: {
                         required: 'Type your email in this field.'
@@ -94,7 +77,6 @@ YUI().use(
                         required: 'Please provide your name.'
                       }
                     };
-
                     new Y.FormValidator(
                       {
                         boundingBox: '#myForm',
@@ -105,8 +87,6 @@ YUI().use(
                     );
                   }
                 );
-
-
 </script>
 </body>
 </html>
