@@ -7,90 +7,78 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Create_Campaign</title>
 <script src="/IdeaClick-portlet/docroot/js/aui-min.js"></script>
 <link href="/IdeaClick-portlet/docroot/css/bootstrap.min.css" rel="stylesheet"></link>
+<link href="login.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 <h3><b>Create Campaign</b></h3>
+<div id="main">
 <form id="myForm">
- <div class="form-group">
-    <label class="control-label" for="campaignnm">Campaign Name:</label>
-    <div class="controls">
-      <input name="campnm" id="campnm" class="form-control field-required" type="text">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label" for="name">Start Date:</label>
-<textarea class="form-control" type="text" placeholder="mm/dd/yy"></textarea>
-</div>
- <div class="form-group">
-    <label class="control-label" for="name">End Date:</label>
-<textarea class="form-control" type="text" placeholder="mm/dd/yy"></textarea>
-</div>
-<div class="form-group">
-    <label class="control-label" for="name">Open for departments:</label>
-    <div class="controls">
-      <select id="dept" name="depts">
-      <option value="0">Please select one..</option>
-    <option value="1"></option>
-    <option value="2"></option></select>
-    </div>
-</div>
-<table>
-<div class="form-group">
-    <tr>
-        <td>
-    <label class="control-label" for="name">Notify frequency:</label></td>
-    <td><div class="controls">
-    <input name="no" id="no" class="form-control field-required" type="number">
-    </div>
-    </td>
-    <td><select id="dept" name="depts">
+
+	<div class="box" style="margin-left: 108px">Campaign Name<b style="color: red;">*</b>: &nbsp; &nbsp;
+	<input name="campnm" id="campnm" class="form-control field-required" type="text" style=" border-radius: 0px 10px 0px 10px; width: 250px">
+    </div><!-- end of box -->
+	<br>	
+	<div class="box" style="margin-left: 108px">Start Date<b style="color: red;">*</b>: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<input  id="datepk" class="form-control field-required" type="text" style=" border-radius: 0px 10px 0px 10px; width: 250px"></div><!-- end of box -->
+	<br>		
+	<div class="box" style="margin-left: 108px">End Date<b style="color: red;">*</b>: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input  id="datepk" class="form-control field-required" type="text" style=" border-radius: 0px 10px 0px 10px; width: 250px"></div><!-- end of box -->
+	<br>
+	
+	
+	<div class="box" style="margin-left: 108px">Open for Departments<b style="color: red">*</b>: &nbsp; &nbsp;<select id="dept" name="depts" style=" border-radius: 0px 10px 0px 10px; width: 150px">
+   		<option value="0">Please select one..</option>
+    	<option value="1"></option>
+    	<option value="2"></option></select>
+    </div><!-- end of box -->
+    <br>
+    <div class="box" style="margin-left: 108px">Notify frequency<b style="color: red">*</b>: &nbsp; &nbsp;<input name="no" id="no" class="form-control field-required" type="number" style=" border-radius: 0px 10px 0px 10px; width: 100px">
+    <select id="dept" name="depts" style=" border-radius: 0px 10px 0px 10px; width: 100px" class="form-control field-required"> 
     <option value="0">Hours</option>
     <option value="1">Days</option>
     <option value="2">weeks</option>
     <option value="3">months</option>
     <option value="4">years</option></select>
-    </td>
-    </tr>
-   </div>
-</table>
-
-
-     
-     
-<input class="btn btn-primary" type="submit" value="Check">
+    </div><!-- end of box -->
+	<br>
+	<div class="box" style="margin-left: 280px; margin-bottom: 20px">   
+        <input class="btn btn-primary" type="submit" value="Next">
+    </div><!-- end of box -->
 </form>
+</div><!-- end of main -->   
+
+
 <script>
 YUI().use(
           'aui-form-validator',
           function(Y) {
             new Y.FormValidator(
-              {
+          {
                 boundingBox: '#myForm'
               }
             );
           }
           );
-          YUI().use(
-                  'aui-datepicker',
-                  function(Y) {
-                    new Y.DatePicker(
-                      {
-                        trigger: 'textarea',
-                        mask: '%m/%d/%y',
-                        calendar: {
-                          selectionMode: 'multiple'
-                        },
-                        popover: {
-                          zIndex: 1
-                        },
-                        panes: 2
-                      }
-                    );
-                  }
-                );
+YUI().use(
+		  'aui-datepicker',
+		  function(Y) {
+		    new Y.DatePicker(
+		      {
+		        trigger: '#datepk',
+		        popover: {
+		          zIndex: 1
+		        },
+		        on: {
+		          selectionChange: function(event) {
+		            console.log(event.newSelection)
+		          }
+		        }
+		      }
+		    );
+		  }
+		);
 </script>
 </body>
 </html>
