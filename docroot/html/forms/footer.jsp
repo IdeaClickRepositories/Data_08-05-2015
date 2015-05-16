@@ -9,82 +9,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Footer</title>
 <script src="/IdeaClick-portlet/docroot/js/aui-min.js"></script>
 <link href="/IdeaClick-portlet/docroot/css/bootstrap.min.css" rel="stylesheet"></link>
+<link href="login.css" rel="stylesheet" type="text/css" /> 
 </head>
 <body>
+
+
 <div id="main">
-	<table width="1200px" align="center" style="margin-bottom: 20px">
-		<tr>
-			<td>
-			<table width="300px" align="center" background="blue">
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">IdeaClick Information</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">IdeaClick Information</a></td>
-			</tr>
-			<tr>
-			 	<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">IdeaClick Information</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">IdeaClick Information</a></td>
-			</tr>
-			</table>
-			</td>
-			<td>
-			<table width="300px" align="center" background="blue">
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			<tr>
-			 	<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			</table>
-			</td>
-			<td>
-			<table width="300px" align="center" background="blue">
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Most View Idea</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Most View Idea</a></td>
-			</tr>
-			<tr>
-			 	<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Most View Idea</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Most View Idea</a></td>
-			</tr>
-			</table>
-			<td>
-			<table width="300px" align="center" background="blue">
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			<tr>
-			 	<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			<tr>
-				<td><a href="#" style="text-decoration: none; font-size:15px;color:blue">Liferay Portal</a></td>
-			</tr>
-			</table>
-			</td>
-		</tr>
-		<tr>
-			<td><p style="font-size: samll;">Copyright @ 2010 by Bill Shakespeare</p></td>
+	<table width="2400px" align="center" style="margin-bottom: 20px; font-size: small;"">
+		<tr><ul>
+			<td>Copyright @ 2015 All rights reserved</td>
+			<td><a href="#" style="color: graytext;"><li>Home</li></a></td>
+			<td><a href="#" style="color: graytext;"><li>Login</li></a></td>
+			<td><a href="#" style="color: graytext;"><li>Org_reg</li></a></td>
+			<td><a href="#" style="color: graytext;"><li>Contact Us</li></a></td>
+		</ul>
 		</tr>
 	</table>
+
 </div><!-- end main -->
 </body>
 </html>
