@@ -21,10 +21,11 @@
 	<table width="2400px" align="center" style="margin-bottom: 20px; font-size: small;"">
 		<tr><ul>
 			<td>Copyright @ 2015 All rights reserved</td>
-			<td><a href="#" style="color: graytext;"><li>Home</li></a></td>
+			<td><a href="#" style="color: graytext;"><li>About_us</li></a></td>
 			<td><a href="#" style="color: graytext;"><li>Login</li></a></td>
 			<td><a href="#" style="color: graytext;"><li>Org_reg</li></a></td>
-			<td><a href="#" style="color: graytext;"><li>Contact Us</li></a></td>
+			<td><a href="#" style="color: graytext;"><li>Contact_us</li></a></td>
+			<td><a href="#" style="color: graytext;"><li>FAQ</li></a></td>
 		</ul>
 		</tr>
 	</table>
